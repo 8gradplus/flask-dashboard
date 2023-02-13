@@ -10,7 +10,7 @@ from app import app
 
 @app.route('/dashboard')
 @login_required
-def chart():
+def dashboard():
     df = pd.DataFrame({
         "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
         "Amount": [4, 1, 2, 2, 4, 5],
