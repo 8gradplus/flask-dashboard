@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+
+[packages]
+ipykernel = "*"
+jupyter = "*"
+jupyterlab = "*"
+jupytext = "*"
+jupyter_contrib_nbextensions = "*"
+matplotlib = "*"
+python-dotenv = "*"
+flask = "*"
+flask-wtf = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-login = "*"
+email-validator = "*"
+pandas = "*"
+plotly = "*"
+
+
+[scripts]
+
+[requires]
+python_version = "3.10"
