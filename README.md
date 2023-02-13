@@ -6,7 +6,9 @@
 
 
 # Flask
-- https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+- https://s3.us-east-2.amazonaws.com/prettyprinted/flask_cheatsheet.pdf flask cheat sheet
+  https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 - Datbase migration
 
 # Applications
@@ -38,3 +40,4 @@ Template engine that enables
 # Plotting
 - Dash
 - Chart.js
+- ...
