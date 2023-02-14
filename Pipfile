@@ -19,10 +19,13 @@ flask-migrate = "*"
 flask-login = "*"
 email-validator = "*"
 pandas = "*"
-plotly = "*"
 
 
 [scripts]
+to_md = "jupytext --to=markdown dashboard.ipynb"
+from_md = "jupytext --to=notebook dashboard.md"
+install_kernel = "python -m ipykernel install --user --name=dashboard"
+notebook = "jupyter notebook dashboard.ipynb"
 
 [requires]
 python_version = "3.10"

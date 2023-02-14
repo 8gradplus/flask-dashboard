@@ -1,7 +1,11 @@
 
 # Todo:
-- Use Blueprint
-- Styling
+- Sample dashboard with several plots
+- Upload files https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
+- Docker
+- Error message upon wrong login
+- Bring to cloud
+- Use Application factory pattern https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-a-better-application-structure
 - Password reset token (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-email-support)
 
 
