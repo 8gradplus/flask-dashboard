@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <!-- Make grid -->
+
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
@@ -11,8 +13,8 @@
             </div>
             <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary rounded h-100 p-4">
-                    <h6 class="mb-4">Multiple Line Chart</h6>
-                    <canvas id="salse-revenue"></canvas>
+                    <h6 class="mb-4">Doughnut</h6>
+                    <canvas id="doughnut-chart"></canvas>
                 </div>
             </div>
             <div class="col-sm-12 col-xl-6">
@@ -24,7 +26,7 @@
             <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Multiple Bar Chart</h6>
-                    <canvas id="worldwide-sales"></canvas>
+                    <canvas id="multiple_bar_chart"></canvas>
                 </div>
             </div>
             <div class="col-sm-12 col-xl-6">
@@ -42,25 +44,14 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        var ctx = document.getElementById("histogram-chart").getContext("2d");
-        var myChart4 = new Chart(ctx, {
-            type: "bar",
-            options: {
-                legend: {
-                    display: false
-                },
-                responsive: true,
-            },
-            data: {
-                labels: {{ rating.rating | safe }},
-                datasets: [{
-                    backgroundColor: "rgba(235, 22, 22, .6)",
-                    borderColor: "rgba(235, 22, 22, .6)",
-                    data: {{ rating.counts | safe }}
-                }]
-            }
+<!-- call plotting functions -->
 
-        });
+    <script type="module">
+        import {histogram, doughnut} from "../../static/js/plotting.js";
+        const x = {{ rating.rating | safe }};
+        const y = {{ rating.counts | safe }};
+        histogram('histogram-chart', x, y);
+        doughnut('doughnut-chart')
+
     </script>
 {% endblock %}

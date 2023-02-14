@@ -7,7 +7,7 @@
 - Bring to cloud
 - Use Application factory pattern https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-a-better-application-structure
 - Password reset token (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-email-support)
-
+- Add swagger: https://realpython.com/flask-javascript-frontend-for-rest-api/
 
 # Flask
 
