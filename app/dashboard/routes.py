@@ -3,10 +3,10 @@ from flask_login import login_required
 import pandas as pd
 import numpy as np
 
-from app import app
+from app.dashboard import bp
 
 
-@app.route('/dashboard')
+@bp.route('/dashboard')
 @login_required
 def dashboard():
 

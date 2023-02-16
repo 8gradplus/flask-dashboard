@@ -1,7 +1,7 @@
 install:
 	pipenv install --dev
 run-local:
-	export FLASK-APP=dashboard.py; pipenv run flask --debug run --port=9000
+	pipenv run python dashboard.py
 init-db:
 	export FLASK-APP=dashboard.py; pipenv run flask db init
 migrate-users:
