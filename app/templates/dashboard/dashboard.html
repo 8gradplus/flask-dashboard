@@ -91,7 +91,7 @@
 <!-- call plotting functions -->
 
     <script type="module">
-        import {histogram, doughnut, timeseries} from "../../static/js/plotting.js";
+        import {histogram, doughnut, timeseries} from "{{ url_for('static', filename='js/plotting.js') }}";
         histogram('histogram-chart',
             {{ rating_histogram.rating | safe }},
             {{ rating_histogram.counts | safe }},

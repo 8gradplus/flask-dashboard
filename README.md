@@ -1,10 +1,10 @@
 
 # Todo:
-- Sample dashboard with several plots
-- Upload files https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
 - Docker
-- Error message upon wrong login
+- Clean up api structure: https://realpython.com/flask-connexion-rest-api/ (Part 1-3)
 - Bring to cloud
+- Upload files https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
+- Error message upon wrong login
 - Use Application factory pattern https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-a-better-application-structure
 - Password reset token (https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-email-support)
 - Add swagger: https://realpython.com/flask-javascript-frontend-for-rest-api/
