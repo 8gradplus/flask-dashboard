@@ -23,6 +23,7 @@ make docker-run
 - Docker
 - Use settings from config in dashboard.py (currently hard coded)
 - Clean up api structure: https://realpython.com/flask-connexion-rest-api/ (Part 1-3)
+- Use a production server (e.g. Waitress) https://flask.palletsprojects.com/en/2.2.x/tutorial/deploy/
 - Bring to cloud
 - Upload files https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
 - Error message upon wrong login

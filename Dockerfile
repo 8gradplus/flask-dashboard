@@ -15,12 +15,13 @@ COPY  --chown=best Pipfile Pipfile
 COPY --chown=best Pipfile.lock Pipfile.lock
 RUN pipenv install
 
-# Copy actual flask application
+# Copy actual flask application and grant rights
 COPY --chown=dashboard config.py config.py
 COPY --chown=dashboard app app
-# corresponds to "main.py"
 COPY --chown=dashboard dashboard.py dashboard.py
+COPY --chown=dashboard start-up.sh start-up.sh
+RUN chmod +x start-up.sh
 
 # Run application
-CMD ["pipenv", "run", "python", "dashboard.py"]
-# CMD ["sleep", "3600"]
+#CMD ["pipenv", "run", "python", "dashboard.py"]
+ENTRYPOINT ["./start-up.sh"]
