@@ -9,6 +9,6 @@ migrate-users:
 upgrade-db:
 	export FLASK-APP=dashboard.py; pipenv run flask db upgrade
 docker-build:
-	docker build -t flask-appp .
+	docker build -t flask-app .
 docker-run:
-	docker run -p 5000:5000 flask-app
+	docker run -p 9000:9000 flask-app

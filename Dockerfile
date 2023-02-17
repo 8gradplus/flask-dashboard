@@ -4,23 +4,23 @@ FROM python:3.10.9-buster
 RUN pip install --upgrade pip
 RUN pip install pipenv
 
-# Add user `dashboard` with homedir `/dashboard`
+# Add user `dashboard` with homedir `/dashboard` and switch
 RUN useradd --create-home --home-dir /dashboard dashboard
-# Become user `dashbaord`
 USER dashboard
+WORKDIR /dashboard
 
 # Copy pipfiles from here to dockerimage
 # Install dependencies
-COPY  Pipfile Pipfile
-COPY Pipfile.lock Pipfile.lock
+COPY  --chown=best Pipfile Pipfile
+COPY --chown=best Pipfile.lock Pipfile.lock
 RUN pipenv install
 
 # Copy actual flask application
-# This needs to be adapted upon rewrite as application factory
-COPY app app
-COPY dashboard.py dashboard.py
-COPY config.py config.py
+COPY --chown=dashboard config.py config.py
+COPY --chown=dashboard app app
+# corresponds to "main.py"
+COPY --chown=dashboard dashboard.py dashboard.py
 
 # Run application
-ENV FLASK_APP=dashboard.py
-CMD ["pipenv", "run", "flask", "run"]
+CMD ["pipenv", "run", "python", "dashboard.py"]
+# CMD ["sleep", "3600"]
