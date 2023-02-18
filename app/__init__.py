@@ -29,5 +29,5 @@ def create_app():
 
     return app
 
-
+# This import has to come after the factory because models depend on app instance
 from app import models
