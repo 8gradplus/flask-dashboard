@@ -24,7 +24,14 @@ make docker-run
 # Resources
 ### AWS:
 - [Set up AWS Environment](https://aws.amazon.com/getting-started/guides/setup-environment/?pg=gs&sec=gtkaws)
-- [Elastic Container Service (ECS)](https://docs.aws.amazon.com/ecs/index.html) to manage Docker containers
+  - User Management with [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) (Identity and Access Managment)
+  - AWS CLI: command line interface
+- Run Docker images
+  - Amazon lightsail
+    - [Tutorial](https://aws.amazon.com/getting-started/hands-on/serve-a-flask-app/)
+    - Remark from mac users: make sure you build a linux/amd64 Docker image!
+  - [Elastic Container Service (ECS)](https://docs.aws.amazon.com/ecs/index.html) to manage Docker containers
+    - [Tutorial](https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/)
 
 ### Flask
 
@@ -36,12 +43,15 @@ make docker-run
   - `wtf-flask` for creating forms and adding security
   - `flask-login` for user management
   - `werkzeug`for hashing password
+- [API first with swagger/connexion examples](https://github.com/spec-first/connexion/tree/main/examples)
+- [User management](https://ckraczkowsky.medium.com/building-a-secure-admin-interface-with-flask-admin-and-flask-security-13ae81faa05)
 
 ### JavaScript for Frontend
 - [Chart.js](https://www.chartjs.org/) for Plotting: [tutorials](https://www.youtube.com/watch?v=ylWoIaSgThk)
 - Pagination and rendering of **Tables** [Example](https://blog.miguelgrinberg.com/post/beautiful-interactive-tables-for-your-flask-templates)
 
-
+## Gauge plot with Chart js
+- https://codepen.io/haiiaaa/pen/rNVbmYy
 
 # Todo:
 
@@ -50,6 +60,7 @@ make docker-run
 - Add C/I from git
 - Manage secrets
 - Make db remember and track changes remote.
+- [Use https](https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https)
 
 
 ### App
@@ -62,5 +73,6 @@ make docker-run
 - Password reset token [Example](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-email-support)
 - Add swagger [Example](https://realpython.com/flask-javascript-frontend-for-rest-api/)
 - Delete users [Example](https://www.youtube.com/watch?v=ogZR7OEv1Pk&list=PLU7aW4OZeUzwn6L1txXQ9viaAIR2mDqbv&index=5)
+- [Api (backend) with authentication](https://blog.teclado.com/api-key-authentication-with-flask/)
 
 

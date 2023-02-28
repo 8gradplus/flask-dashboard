@@ -11,8 +11,8 @@ WORKDIR /dashboard
 
 # Copy pipfiles from here to dockerimage
 # Install dependencies
-COPY  --chown=best Pipfile Pipfile
-COPY --chown=best Pipfile.lock Pipfile.lock
+COPY  --chown=dashbaord Pipfile Pipfile
+COPY --chown=dashboard Pipfile.lock Pipfile.lock
 RUN pipenv install
 
 # Copy actual flask application and grant rights
@@ -23,5 +23,4 @@ COPY --chown=dashboard start-up.sh start-up.sh
 RUN chmod +x start-up.sh
 
 # Run application
-#CMD ["pipenv", "run", "python", "dashboard.py"]
 ENTRYPOINT ["./start-up.sh"]

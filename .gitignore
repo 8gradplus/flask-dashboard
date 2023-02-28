@@ -3,6 +3,9 @@ app.db
 .idea/
 .ipynb_checkpoints
 __pycache__/
+.DS_Store
+lightsail/
+
 
 # Flask stuff:
 instance/

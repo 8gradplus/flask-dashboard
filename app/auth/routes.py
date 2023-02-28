@@ -14,6 +14,8 @@ from app.auth.forms import LoginForm
 from app.auth.forms import RegistrationForm
 from app import db
 
+import json
+
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -52,3 +54,9 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', title='Register', form=form)
+
+
+@bp.route('/all_users')
+def all_users():
+    users = User.query.all()
+    return users

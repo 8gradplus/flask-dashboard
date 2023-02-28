@@ -10,5 +10,7 @@ upgrade-db:
 	pipenv run flask db upgrade
 docker-build:
 	docker build -t flask-app .
+docker-build-linux:
+	docker buildx build --platform linux/amd64 -t flask-app .
 docker-run:
-	docker run -dp 9000:9000 flask-app
+	docker run -dp 5000:5000 flask-app
