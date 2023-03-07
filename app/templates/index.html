@@ -4,4 +4,10 @@
 <div class="p-5 text-center">
     <h1>Hi, {{ current_user.username }}!</h1>
 </div>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="file">File</label>
+    <input type="file" id="file" name="file">
+    <button>Upload</button>
+
+    </form>
 {% endblock %}

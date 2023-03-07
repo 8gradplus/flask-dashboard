@@ -1,3 +1,6 @@
+[simply wallstreest](https://simplywall.st/stocks/de/automobiles/etr-mbg/mercedes-benz-group-shares/future)
+
+
 Just another Flask Dashboard - but not as pretty as 
 [Volt](https://github.com/app-generator/flask-volt-dashboard), 
 [Volt black](https://github.com/app-generator/flask-black-dashboard), ...
@@ -53,6 +56,8 @@ make docker-run
 ## Gauge plot with Chart js
 - https://codepen.io/haiiaaa/pen/rNVbmYy
 
+## Search bar
+- [Example](https://codepen.io/mey_mnry/pen/QWqPvox)
 # Todo:
 
 ### Deployment
@@ -74,5 +79,5 @@ make docker-run
 - Add swagger [Example](https://realpython.com/flask-javascript-frontend-for-rest-api/)
 - Delete users [Example](https://www.youtube.com/watch?v=ogZR7OEv1Pk&list=PLU7aW4OZeUzwn6L1txXQ9viaAIR2mDqbv&index=5)
 - [Api (backend) with authentication](https://blog.teclado.com/api-key-authentication-with-flask/)
-
+- [File upload](https://www.youtube.com/watch?v=BP8ulGbu1fc)
 

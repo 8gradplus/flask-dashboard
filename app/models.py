@@ -1,4 +1,5 @@
 from app import db
+from app import ma
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 from flask_login import UserMixin
@@ -24,3 +25,21 @@ class User(UserMixin, db.Model):
 @login.user_loader
 def load_user(id: str):
     return User.query.get(int(id))
+
+
+class UserSchema(ma.SQLAlchemySchema):
+    class Meta:
+        model = User
+
+    id = ma.auto_field()
+    username = ma.auto_field()
+    email = ma.auto_field()
+
+
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
+
+
+
+
+

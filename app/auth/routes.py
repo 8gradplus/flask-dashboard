@@ -9,13 +9,13 @@ from flask_login import logout_user
 from werkzeug.urls import url_parse
 
 from app.auth import bp
-from app.models import User
+from app.models import User, users_schema
 from app.auth.forms import LoginForm
 from app.auth.forms import RegistrationForm
 from app import db
+from flask import Response, jsonify
 
-import json
-
+# todo make true api for login, logout and register
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -59,4 +59,34 @@ def register():
 @bp.route('/all_users')
 def all_users():
     users = User.query.all()
-    return users
+    return users_schema.dump(users)
+
+
+@bp.route('/delete_user/<string:username>')
+def delete_user(username):
+    user_to_delete = User.query.filter(User.username == username).one_or_none()
+    if not user_to_delete:
+        msg = f"Could not find user {user_to_delete.username}"
+        return Response(msg, status="404")
+    db.session.delete(user_to_delete)
+    db.session.commit()
+    msg = f"Deleted user {user_to_delete.username}"
+    return Response(msg, status="200")
+
+"""
+add user via post request and json
+@bp.route('add_user', ["POST"])
+def add_user():
+    form = RegistrationForm()
+    if not form.validate_on_submit():
+        return jsonify({"message": "Could not create user"})
+
+    user = User(username=form.username.data, email=form.email.data)
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+    return jsonify({"message": "Created user"})
+"""
+
+
+

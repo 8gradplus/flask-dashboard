@@ -1,5 +1,7 @@
 app.db
 
+resources 
+
 .idea/
 .ipynb_checkpoints
 __pycache__/

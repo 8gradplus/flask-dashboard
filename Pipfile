@@ -11,6 +11,8 @@ flask-wtf = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-login = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 email-validator = "*"
 pandas = "*"
 
