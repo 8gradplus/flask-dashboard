@@ -1,6 +1,6 @@
 install:
 	pipenv install --dev
-run-local:
+run-backend-local:
 	pipenv run python dashboard.py
 init-db:
 	pipenv run flask db init

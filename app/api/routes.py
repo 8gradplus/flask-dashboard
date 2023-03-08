@@ -1,4 +1,5 @@
 import json
+
 from flask import request
 
 from app import data
@@ -26,3 +27,15 @@ def filter_data():
     response = df[df['isin'] == isin].squeeze().to_dict()
     return json.dumps(response, indent=4)
 
+
+@bp.route("/search")
+def search():
+    df = data.df
+    selection = ['isin', 'bondName', 'issueDate']
+    response = df[selection].to_dict('records')
+    return json.dumps(response, indent=4)
+
+
+@bp.route('health')
+def health():
+    return "I am healthy"
